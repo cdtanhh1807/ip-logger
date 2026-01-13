@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+*.egg-info/
+
+# Flask
+instance/
+.webassets-cache
+
+# Log
+ips.log
+
+# OS
+.DS_Store
+Thumbs.db
