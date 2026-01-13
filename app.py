@@ -15,7 +15,9 @@ def get_real_ip():
 @app.route('/')
 def index():
     ip = get_real_ip()
-    # Ghi log (tùy chọn)
+    # 1. In ra console (Render Logs)
+    print("IP:", ip, flush=True)      # flush=True đảm bảo không bị buffer
+    # 2. Vẫn ghi file (tùy chọn, có thể bỏ)
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(f"{datetime.utcnow().isoformat()}  {ip}\n")
     return render_template('index.html', ip=ip)
